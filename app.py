@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-
+import numpy as np
 import pickle
 
 
@@ -90,5 +90,6 @@ def predict():
       return render_template('index.html', prediction_text='The person is exited', extra_text ="-> Prediction by " + Model)
 
 
-app.run()
 
+if __name__ == "__main__":
+    app.run(debug=True)
